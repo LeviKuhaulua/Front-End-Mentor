@@ -1,0 +1,68 @@
+/* From Starter Code file */ 
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: hsl(228, 45%, 44%);}
+
+/* Classes to utilize Google Fonts API */
+.outfit-700 {
+    font-family: "Outfit", system-ui; 
+    font-optical-sizing: auto; 
+    font-weight: 700; 
+    font-style: normal; 
+}
+
+.outfit-400 {
+    font-family: "Outfit", system-ui; 
+    font-optical-sizing: auto; 
+    font-weight: 400; 
+    font-style: normal; 
+}
+
+:root {
+    --clr-grayBlue: hsl(220, 15%, 55%); 
+    --clr-darkBlue: hsl(218, 44%, 22%); 
+    --clr-lightGray: hsl(212, 45%, 89%); 
+    --clr-white: hsl(0, 0%, 100%); 
+    font-size: 15px; 
+    font-family: system-ui, 'Segoe UI', Roboto, Helvetica, sans-serif; 
+    margin: 0; 
+}
+
+*, *::after, *::before {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+
+
+body {
+    background-color: var(--clr-lightGray);
+}
+
+img {
+    display: block; 
+    width: 100%; 
+    border-radius: 10px;
+}
+
+
+.container {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%; 
+}
+
+.card {
+    padding: 1em; 
+    width: 40ch; 
+    background-color: var(--clr-white); 
+    border-radius: 10px; 
+    text-align: center; 
+    text-wrap: balance; 
+}
+
+.card > h3 {
+    color: var(--clr-darkBlue);
+    font-size: 1.375rem; 
+}
+
+.card > p {
+    color: var(--clr-grayBlue);
+    font-size: 1.125rem; 
+}
