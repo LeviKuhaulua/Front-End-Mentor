@@ -1,0 +1,106 @@
+/* From Front-End Mentor */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Font and Font Classes*/
+
+@import url(https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap);
+
+.figtree-500 {
+    font-family: "Figtree", 'Segoe UI', Roboto, system-ui, sans-serif; 
+    font-optical-sizing: auto;
+    font-weight: 500; 
+    font-style: normal; 
+}
+
+.figtree-800 {
+    font-family: "Figtree", 'Segoe UI', Roboto, system-ui, sans-serif; 
+    font-optical-sizing: auto; 
+    font-weight: 800; 
+    font-style: normal; 
+}
+
+/* HTML Styling */
+
+*, *::before, *::after { box-sizing:border-box; }
+
+:root {
+    font-size: 16px; 
+    line-height: 1.2; 
+    --clr-primary: hsl(47, 88%, 63%); 
+    --clr-white: hsl(0, 0%, 100%); 
+    --clr-grey: hsl(0, 0%, 50%); 
+    --clr-black: hsl(0, 0%, 7%); 
+}
+
+body {
+    margin: 0; 
+    background-color: var(--clr-primary); 
+    min-height: 100vh; /* Allow content to be placed in the center for Flex */ 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 5rem; 
+}
+
+.card {
+    text-align: left; 
+    max-width: 45ch; 
+    background-color: var(--clr-white); 
+    border: 1px solid var(--clr-black); 
+    border-radius: 10px; 
+    padding: 1.125em; 
+    box-shadow: 10px 10px 0px 1px var(--clr-black); 
+}
+
+.card__img {
+    display: block; 
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+.card__category {
+    text-align: center; 
+    max-width: 10ch; 
+    padding: 0.875em 1em; 
+    background-color: var(--clr-primary);
+    border-radius: 5px; 
+    font-size: 0.875rem; 
+}
+
+.card__published {
+    font-size: 0.875rem; 
+}
+
+.card__header {
+    font-size: 1.5rem; 
+    margin-block: 1rem;  
+}
+
+.card__header:hover {
+    color: var(--clr-primary); 
+    cursor: pointer; 
+}
+
+.article__descript {
+    color: var(--clr-grey); 
+    font-size: 0.875rem; 
+}
+
+.card__footer {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 1em; 
+}
+
+.card__footer > img {
+    width: 32px; 
+    height: 32px; 
+}
+
+.card__footer > p {
+    font-size: 0.875rem; 
+}
