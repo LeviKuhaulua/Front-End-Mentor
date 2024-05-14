@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/LeviKuhaulua/Front-End-Mentor/blog-preview-card]()
-- Live Site URL: [https://levikuhaulua.github.io/Front-End-Mentor/blog-preview-card/preview%20code.html]()
+- Live Site URL: [https://levikuhaulua.github.io/Front-End-Mentor/blog-preview-card/preview%20card.html]()
 
 ## My process
 

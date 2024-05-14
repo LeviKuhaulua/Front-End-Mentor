@@ -46,6 +46,7 @@ main {
     padding-top: 1.25rem; 
     padding-left: 0.25em; 
     display: flex; 
+    flex-direction: row; 
     align-items: center; 
     gap: 5rem; 
 }
