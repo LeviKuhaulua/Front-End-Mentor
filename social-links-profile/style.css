@@ -1,0 +1,87 @@
+/* From Front End Mentor */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+* {box-sizing: border-box;}
+
+:root {
+    font-size: 16px; 
+    --clr-primary: hsl(75, 94%, 57%); 
+    --clr-white: hsl(0, 0%, 100%); 
+    --clr-grey: hsl(0, 0%, 20%); 
+    --clr-dark__grey: hsl(0, 0%, 12%); 
+    --clr-black: hsl(0, 0%, 8%); 
+    --ff-stack: "Inter", 'Segoe UI', system-ui, sans-serif; 
+    font-family: var(--ff-stack); 
+    background-color: var(--clr-black);
+    color: var(--clr-white); 
+}
+
+body {
+    margin: 0; 
+    display: grid; 
+    place-items: center; 
+    align-content: center; 
+    min-height: 100vh; 
+    gap: 1rem; 
+}
+
+img {
+    display: block; 
+    width: 100%; 
+}
+
+
+.card {
+    display: flex; 
+    flex-direction: column; 
+    text-align: center; 
+    max-width: min(30ch, 80% + 1em); 
+    background-color: var(--clr-dark__grey); 
+    border-radius: 10px; 
+    padding: 1em; 
+}
+
+
+.image__profile {
+    border-radius: 100%; 
+    margin: 0 auto; 
+    width: 64px; 
+    height: 64px; 
+}
+
+.profile__heading {
+    line-height: 0.9; 
+}
+
+.profile__location {
+    color: var(--clr-primary); 
+    font-weight: 600; 
+    margin-top: 0; 
+}
+
+.profile__quote::before, .profile__quote::after {content:"\"";}
+
+.profile__quote {
+    font-size: 0.875rem; 
+    margin-bottom: 0; 
+}
+
+.nav__links-item {
+    display: block; 
+    margin: 1em 0; 
+    padding: 0.5em 0; 
+    text-decoration: none; 
+    color: var(--clr-white); 
+    background-color: var(--clr-grey); 
+    border-radius: 10px; 
+}
+
+.nav__links-item:hover {
+    background-color: var(--clr-primary); 
+    color: var(--clr-black); 
+    font-weight: 700; 
+    transition: background-color 500ms; 
+}
+
