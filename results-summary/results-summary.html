@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="author" content="Levi Kuhaulua"/> 
+  <meta name="description" content="Implementation of the Results-Summary component challenge in Front-End Mentor"/> 
+  <meta name="keywords" content="Frontend Mentor, HTML, JavaScript, CSS, JSON parsing"/> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"/> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/"/> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/> 
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet"/> 
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+</head>
+<body>
+
+  <main>
+    <article class="results">
+      <section id="resultsCard" class="results__card">
+        
+        <h2 class="results__text results__card-header">Your Result</h2>
+        
+        <figure class="results__card-score">
+          <hgroup>
+            <h1>76</h1>
+            <p>of 100</p>
+          </hgroup>
+        </figure>
+
+        <figcaption class="results__text">
+          <h2>Great</h2>
+          <p>You scored higher than 65% of the people who have taken these tests.</p>
+        </figcaption>
+      </section>
+
+      <section id="resultsScores" class="results__scores"> 
+        <h2>Summary</h2>
+        
+        <section class="wrapper">
+          <figure id="reaction" class="category category__reaction"> 
+            <img src="assets/images/icon-reaction.svg" alt="Reaction icon" width="32px" id="imageReaction"/> 
+            <h5>Reaction</h5>
+            <p>80</p>
+          </figure>
+          
+          <figure id="memory" class="category category__memory"> 
+            <img src="assets/images/icon-memory.svg" alt="Memory icon" width="32px" id="imageMemory"/> 
+            <h5>Memory</h5>
+            <p>92</p>
+          </figure>
+
+          <figure class="category category__verbal"> 
+            <img src="assets/images/icon-verbal.svg" alt="Verbal icon" width="32px" id="imageVerbal"/> 
+            <h5>Verbal</h5>
+            <p>61</p>
+          </figure> 
+
+          <figure class="category category__visual"> 
+            <img src="assets/images/icon-visual.svg" alt="Visual icon" width="32px" id="imageVisual"/> 
+            <h5>Visual</h5>
+            <p>72</p>
+          </figure>
+
+        </section>
+
+        <button type="button">Continue</button>
+      </section>
+    </article>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LeviKuhaulua">Levi Kuhaulua</a>.
+  </footer>
+</body>
+</html>
