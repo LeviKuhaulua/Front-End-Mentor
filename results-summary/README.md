@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ![](https://github.com/LeviKuhaulua/Front-End-Mentor/tree/main/results-summary)
-- Live Site URL: ![](https://levikuhaulua.github.io/Front-End-Mentor/results-summary.html)
+- Solution URL: https://github.com/LeviKuhaulua/Front-End-Mentor/tree/main/results-summary
+- Live Site URL: https://levikuhaulua.github.io/Front-End-Mentor/results-summary/results-summary.html
 
 ## My process
 
