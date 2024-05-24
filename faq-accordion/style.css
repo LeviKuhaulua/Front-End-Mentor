@@ -1,0 +1,114 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+:root {
+  font-size: 16px;
+  --clr-white: hsl(0, 0%, 100%); 
+  --clr-light-pink: hsl(275, 100%, 97%); 
+  --clr-purple: hsl(292, 16%, 49%); 
+  --clr-dark-purple: hsl(292, 42%, 14%); 
+  --ff-primary: 'Work Sans', system-ui, sans-serif;  
+}
+
+body { 
+  margin: 0; 
+  font-family: var(--ff-primary); 
+  background: url(assets/images/background-pattern-desktop.svg), var(--clr-light-pink); 
+  background-repeat: no-repeat; 
+  background-size: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 2rem; 
+}
+
+.faq {
+  margin-top: 10%; 
+  width: min(50ch, 70%); 
+  background-color: var(--clr-white); 
+  border-radius: 20px; 
+  padding: 2rem; 
+  text-align: left; 
+}
+
+.faq__section :is(h4) {
+  margin-block: 0; 
+}
+
+.faq__button { 
+  border: none; 
+  background-color: unset; 
+  text-align: inherit; 
+  padding: 0; 
+  width: 100%; 
+  font: inherit;
+  display: inherit; 
+  justify-content: inherit; 
+  align-items: inherit; 
+
+  &:focus-visible {
+    color: var(--clr-purple);
+  }
+}
+
+.faq__header {
+  font-size: clamp(4rem, 5vw + 1rem, 5rem); 
+  margin-block: 0; 
+  display: flex; 
+  font-weight: 700; 
+}
+
+.faq__header::before {
+  content: url(assets/images/icon-star.svg); 
+  margin-inline-end: 20px; 
+}
+
+.faq__question {
+  display: flex;
+  justify-content: start; 
+  gap: 1rem; 
+  align-items: center;  
+  margin-block-end: 0; 
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.5vw + 0.125em, 1.125rem); 
+}
+
+.faq__question :is(img) {
+  margin-left: auto; 
+}
+
+.faq__question :is(.faq__button):hover {
+  color: var(--clr-purple); 
+  cursor: pointer; 
+}
+
+:is(.faq__answer) {
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 175ms; 
+  margin-block-start: 0.125rem; 
+  color: var(--clr-purple); 
+  font-weight: 400; 
+  font-size: clamp(0.625rem, 1vw + 0.25em, 1.125rem)
+}
+
+/* Smaller Screen Sizes -: Changing Background */
+
+@media (width <= 426px) {
+  body {
+    background: url(assets/images/background-pattern-mobile.svg), var(--clr-light-pink); 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+  }
+}
+
+/* Accessibility: Should users have turned off / disabled animations */
+@media (prefers-reduced-motion) {
+  .faq__answer {
+    transition: max-height 0ms; 
+  }
+}
+
+
