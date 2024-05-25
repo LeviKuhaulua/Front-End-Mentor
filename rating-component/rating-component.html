@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Levi Kuhaulua"> 
+  <meta name="description" content="Implementation of the interactive rating component challenge by Frontend Mentor"> 
+  <meta name="keywords" content="JavaScript, HTML, CSS, Frontend Mentor"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"> 
+
+  <!-- Google Fonts API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <title>Frontend Mentor | Interactive rating component</title>
+  
+  <script src="rating-component.js" defer></script> 
+</head>
+<body>
+
+  <article id="ratingComponent" class="rating" role="main">
+     
+    <figure> 
+      <img class="rating__image" src="images/icon-star.svg" alt="Picture of a Star" aria-hidden="true">
+    </figure>
+
+    <h1 class="rating__header">How did we do?</h1>
+    
+    <p class="rating__text">
+      Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!
+    </p>
+    
+    <form action="" class="form">
+
+      <fieldset id="ratingOptions" class="form__options">
+
+          <input type="radio" id="1" name="rating" value="1">
+          <label class="form__options-item" for="1">1</label>
+
+          <input type="radio" id="2" name="rating" value="2">
+          <label class="form__options-item" for="2">2</label>
+        
+          <input type="radio" id="3" name="rating" value="3">
+          <label class="form__options-item" for="3">3</label>
+        
+          <input type="radio" id="4" name="rating" value="4">
+          <label class="form__options-item" for="4">4</label>
+        
+          <input type="radio" id="5" name="rating" value="5">
+          <label class="form__options-item" for="5">5</label>
+        </fieldset>
+        
+        <button class="form__button" type="button">Submit</button>
+        
+      </form>
+      
+    
+  </article>
+
+
+  <article id="mahalo" class="mahalo">
+    <img class="mahalo__image" src="images/illustration-thank-you.svg" alt="Rating Submitted icon" aria-hidden="true"> 
+    
+    <p class="mahalo__rating">You selected (Add rating here) out of 5</p>
+
+    <h1 class="mahalo__header">Thank you!</h1>
+    <p class="mahalo__appreciation">We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!</p>
+  </article>
+  
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LeviKuhaulua" target="_blank">Levi Kuhaulua</a>.
+  </footer> -->
+</body>
+</html>
