@@ -17,7 +17,7 @@ function updateFAQ(questionElement) {
     if (img.src.endsWith(svgPlus)) {
         img.src = svgMinus 
         img.alt = "Minimize Icon" 
-        faqAnswer.style.maxHeight = "1000px" 
+        faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px"
         faqAnswer.ariaHidden = "false"
     } else {
         img.src = svgPlus
