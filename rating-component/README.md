@@ -99,3 +99,7 @@ I do want to get better with handling and working with `form` and `input` elemen
 - Github - [LeviKuhaulua](https://github.com/LeviKuhaulua)
 - LinkedIn - [Levi Kuhaulua](www.linkedin.com/in/levi-kuhaulua)
 
+# Acknowledgements
+
+[Koda Code Comment](https://www.frontendmentor.io/solutions/interactive-rating-component-with-css-nesting-and-javascript-Mf5CSB6iAT) - Want to give Koda a shoutout for helping me with understanding why my initial implementation of getting the rating component was not retrieving the value associated with the radio button. This comment helped me to be aware of where the return statements are located (inner or outer function) so that my code behaves the way it is intended. 
+

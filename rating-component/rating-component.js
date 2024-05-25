@@ -3,13 +3,13 @@ const ratingOptions = document.querySelectorAll('input[name="rating"]')
 const button = ratingComponent.querySelector('button')
 
 function getRating() {
-    for (let i = 0; i < ratingOptions.length; i++) {
-        if(ratingOptions[i].checked) {
-            return ratingOptions[i].value
+    let value = 0; 
+    ratingOptions.forEach(e => {
+        if (e.checked) {
+            value = e.value
         }
-    }
-    // This means that user did not select anything and just decided to click submit
-    return 0
+    })
+    return value
 }
 
 button.addEventListener('click', () => {
