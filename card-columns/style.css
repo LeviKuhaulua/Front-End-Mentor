@@ -1,0 +1,116 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    font-size: 16px; 
+    --clr-orange: hsl(31, 77%, 52%); 
+    --clr-cyan: hsl(184, 100%, 22%); 
+    --clr-dark-cyan: hsl(179, 100%, 13%); 
+    --clr-accent-white: hsla(0, 0%, 100%, 0.75); 
+    --clr-accent-gray: hsl(0, 0%, 95%); 
+    --ff-primary: 'Big Shoulders Display'; 
+    --ff-accent: 'Lexend Deca'; 
+}
+
+body { 
+    margin: 0; 
+    background-color: var(--clr-accent-gray); 
+    display: grid; 
+    place-items: center; 
+    min-height: 100vh; 
+}
+
+img {
+    display: block; 
+    object-fit: cover; 
+    width: 100%; 
+}
+
+.columns {
+    width: min(35ch * 3, 90%); 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+   & .columns__card:nth-child(1) {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+   }
+
+   & .columns__card:nth-child(3) {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+   }
+}
+
+.columns__card {
+    padding: 2em; 
+    text-align: left; 
+    font-size: 0.9375rem; 
+    display: grid; 
+    grid-template-rows: subgrid;
+    grid-row: span 4; 
+    gap: 1.25rem; 
+    color: var(--clr-accent-gray); 
+
+    & .columns__card-image {
+        width: 64px; 
+        height: 40px; 
+    }
+
+    & .columns__card-header {
+        font-size: 2.25rem; 
+        font-family: var(--ff-primary); 
+        margin-block-start: 0; 
+        margin-block-end: 0; 
+    }
+
+    & .columns__card-text {
+        font-family: var(--ff-accent); 
+        color: var(--clr-accent-white); 
+        margin-block-start: 0; 
+        margin-block-end: 2rem; 
+    }
+
+    & .columns__card-button {
+        border: 3px solid var(--clr-accent-gray); 
+        border-radius: 100vw;
+        margin-block: 1.5rem 1rem; 
+        padding: 0.75em 1em; 
+        width: fit-content;  
+        background-color: var(--clr-accent-gray); 
+        font-size: inherit;  
+        font-weight: 700; 
+    }
+
+    & .columns__card-button:hover { 
+        cursor: pointer; 
+        background-color: unset; 
+        color: var(--clr-accent-gray); 
+        transition: all 250ms; 
+    }
+}
+
+.columns__card-sedan {
+    background-color: var(--clr-orange); 
+
+    & button {
+        color: var(--clr-orange); 
+    }
+}
+
+.columns__card-suv {
+    background-color: var(--clr-cyan); 
+    
+    & button {
+        color: var(--clr-cyan); 
+    }
+}
+
+.columns__card-luxury {
+    background-color: var(--clr-dark-cyan);
+
+    & button {
+        color: var(--clr-dark-cyan); 
+    }
+}
+
