@@ -1,0 +1,158 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+    font-size: 16px; 
+    --clr-blue: hsl(223, 87%, 63%);
+    --clr-light-blue: hsl(223, 100%, 88%);
+    --clr-red: hsl(354, 100%, 66%);
+    --clr-gray: hsl(0, 0%, 59%); 
+    --clr-dark-blue: hsl(209, 33%, 12%); 
+    --ff-primary: 'Libre Franklin', system-ui, sans-serif; 
+}
+
+img {
+    display: block; 
+    max-width: 100%; 
+    object-fit: cover; 
+}
+
+body {
+    margin: 0; 
+    font-family: var(--ff-primary); 
+    font-size: 1.25rem; /* 20px */
+}
+
+.landingpage { 
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 0.75rem; 
+
+    & img {
+        margin-top: 2rem; 
+    }
+
+}
+
+.landingpage__header {
+    color: var(--clr-dark-blue); 
+
+    & :is(h1) {
+        text-transform: uppercase;
+        font-size: 1.5rem; 
+        font-weight: 700; 
+    }
+
+    & :is(h1)::after {
+        content: ".";
+        color: var(--clr-blue); 
+    }
+
+    & :is(p) {
+        margin-block-end: 0; 
+        font-size: clamp(1.3125rem, 3vw + 0.25em, 2.75rem);
+        font-weight: 700; 
+
+       & span {
+            color: var(--clr-gray); 
+            font-weight: 300; 
+       }
+    }
+
+    
+}
+
+.subscription__p { 
+    font-weight: 300; 
+    margin-block-start: 0.25rem; 
+    margin-block-end: 0.5rem; 
+    
+}
+
+form {
+    position: relative; 
+    width: min(40ch, 100% - 2rem); 
+    display: inherit;
+    gap: 0.5rem; 
+    flex-wrap: wrap; 
+
+    & > * {
+        flex-grow: 1; 
+    }
+
+    & .subscription__input { 
+        flex-basis: 40ch; 
+        padding: 1em; 
+        border: 1px solid var(--clr-light-blue); 
+        border-radius: 100vw; 
+    }
+
+
+    & .subscription__button { 
+        flex-basis: 20ch; 
+        padding: 1em; 
+        border: 1px solid var(--clr-light-blue); 
+        background-color: var(--clr-blue);
+        border-radius: 100vw; 
+        font-weight: 600; 
+        color: white; 
+    }
+
+
+    & .subscription__button:hover {
+        cursor: pointer; 
+        opacity: 0.9; 
+
+    }
+
+    &:has(.subscription__button:hover) :is(.subscription__input:invalid, .subscription__input:placeholder-shown){
+        border-color: var(--clr-red);        
+    }    
+
+    & #errorMessage {
+        display: none; 
+        position: absolute; 
+        bottom: -30px; 
+        left: 10px; 
+        margin-inline-start: 0.25rem; 
+        color: var(--clr-red); 
+        font-weight: 600; 
+        opacity: 0.9; 
+        font-size: 0.625rem; 
+    }
+    
+
+}
+
+.copyright {
+    color: var(--clr-gray); 
+    font-size: 0.75rem; 
+}
+
+.socials {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; 
+    
+    & > ion-icon {
+        font-size: 24px;  
+        color: var(--clr-blue);
+        border: 1px solid var(--clr-light-blue); 
+        border-radius: 50%; 
+        padding: 0.3125rem; 
+    }
+
+    & ion-icon:hover {
+        cursor: pointer; 
+        color: white; 
+        background-color: var(--clr-blue); 
+    }
+}
+
+
+
+
