@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/LeviKuhaulua/Front-End-Mentor/tree/main/intro-with-signup
-- Live Site URL: https://levikuhaulua.github.io/Front-End-Mentor/intro-with-signup.html
+- Live Site URL: https://levikuhaulua.github.io/Front-End-Mentor/intro-with-signup/intro-with-signup.html
 
 ## My process
 
