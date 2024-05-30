@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Levi Kuhaulua"> 
+  <meta name="description" content="Implementation of the Intro with Signup Form challenge by Frontend Mentor"> 
+  <meta name="keywords" content="HTML, CSS, JavaScript, CSS Grid, Form Validation">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"> 
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <script src="signup.js" defer></script>
+</head>
+<body>
+
+  <main class="wrapper">
+    <h1 class="col col__header"> 
+      Learn to code by watching others
+      <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable.</p>
+    </h1>
+
+    <section class="col col__signup"> 
+      <h2 class="signup__heading"><span>Try it free 7 days</span> then $20/mo. thereafter</h2>
+
+      <form class="signup__form">
+        <div> 
+          <input class="signup__form-input" 
+            name="First Name" type="text" 
+            placeholder="First Name" 
+            aria-placeholder="Enter first name" 
+            required 
+            aria-required="true" 
+            aria-live="assertive">
+          <span class="validity__error"></span>
+          <img src="images/icon-error.svg" alt="Error Icon"> 
+        </div>
+        <div> 
+          <input class="signup__form-input" 
+            name="Last Name" 
+            type="text" 
+            placeholder="Last Name" 
+            aria-placeholder="Enter last name" 
+            required aria-required="true" 
+            aria-live="assertive">
+          <span class="validity__error"></span>
+          <img src="images/icon-error.svg" alt="Error Icon"> 
+        </div>
+        <div>
+          <input class="signup__form-input" 
+            name="Email Address" 
+            type="email" 
+            placeholder="Email Address" 
+            aria-placeholder="Enter email" 
+            required aria-required="true" 
+            aria-live="assertive"
+            pattern=".+[@][\w]+[.][\w]+">
+          <span class="validity__error"></span>
+          <img src="images/icon-error.svg" alt="Error Icon"> 
+        </div>
+        <div>
+          <input class="signup__form-input" 
+            name="Password" 
+            type="password" 
+            placeholder="Password" 
+            aria-placeholder="Create password here" 
+            required 
+            aria-required="true" 
+            aria-live="assertive">
+          <span class="validity__error"></span>
+          <img src="images/icon-error.svg" alt="Error Icon"> 
+        </div>
+        <button class="signup__form-btn" type="button">Claim your free trial</button> 
+        <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </section>
+  </main>
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/LeviKuhaulua" target="_blank">Levi Kuhaulua</a>.
+    </p>
+  </footer> -->
+</body>
+</html>
