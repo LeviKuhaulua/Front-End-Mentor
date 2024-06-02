@@ -1,0 +1,105 @@
+/* For browsers that don't support the translate property */
+@supports not (translate: -50% 0) {
+    .advice__button {
+        transform: translate(-50%, 0);  
+    }
+}
+
+/* For people that don't want animations */
+@media (prefers-reduced-motion) {
+    .advice__button:hover {
+        transition: none; 
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+:root {
+    font-size: 1rem; 
+    --clr-primary-cyan: hsl(193 38% 86%); 
+    --clr-primary-green: hsl(150 100% 66%); 
+    --clr-neutral-700: hsl(217 19% 38%); 
+    --clr-neutral-800: hsl(217 19% 24%); 
+    --clr-neutral-900: hsl(218 23% 16%);
+}
+
+body { 
+    color: white; 
+    margin: 0; 
+    background-color: var(--clr-neutral-900); 
+    font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100dvh; 
+    display: grid; 
+    place-items: center;  
+}
+
+img {
+    max-width: 100%; 
+    display: block;
+    object-fit: cover; 
+}
+
+.advice {
+    position: relative;  
+    text-align: center; 
+    width: min(45ch, 90%); 
+    background-color: var(--clr-neutral-800); 
+    padding: 1.5em; 
+    border-radius: 20px; 
+
+    & .advice__header {
+        display: none; 
+        color: var(--clr-primary-green); 
+        font-size: 0.875rem; 
+        letter-spacing: 0.5ch; 
+    }
+
+    & .advice__text { 
+        display: none; 
+        color: var(--clr-primary-cyan); 
+        font-size: clamp(1rem, 2vw + 0.25em, 1.75rem); 
+        margin-block: 1.25rem 1.75rem; 
+        text-wrap: balance; 
+    }
+
+    & .advice__text::before { content: open-quote; }
+    & .advice__text::after { content: close-quote; }
+
+    & .advice__button {
+        position: absolute; 
+        border-radius: 50%; 
+        padding: 1em; 
+        left: 50%;  
+        translate: -50%; 
+        border: none; 
+        background-color: var(--clr-primary-green); 
+
+    }
+   
+
+    & .advice__button:hover, 
+      .advice__button:focus-visible {
+        outline: none; 
+        cursor: pointer; 
+        filter: drop-shadow(0 0 10px var(--clr-primary-green)); 
+        transition: filter 250ms; 
+    }
+
+}
+
+.advice__divider {
+    height: 16px; 
+    margin-block: 1rem 2rem; 
+    background-image: url(images/pattern-divider-desktop.svg); 
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+}
+
+@media (width < 426px) {
+    .advice__divider {
+        background-image: url(images/pattern-divider-mobile.svg); 
+    }
+}
