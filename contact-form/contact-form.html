@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Levi Kuhaulua"> 
+  <meta name="description" content="Implementation of the Contact Form component challenge from Frontend Mentor"> 
+  <meta name="keywords" content="Accessible Contact Form, Frontend Mentor, HTML, CSS, JavaScript"> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Google Fonts API -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Contact form</title>
+  <script src="contact.js" defer></script>
+</head>
+<body>
+
+  <section 
+    id="successDialog" 
+    role="alert" 
+    class="dialog" 
+    aria-label="success message dialog" 
+    aria-hidden="true" 
+    aria-live="assertive"> 
+    <h1 class="dialog__header">
+      <img class="dialog__img" src="assets/images/icon-success-check.svg" alt="Success Icon" aria-hidden="true">
+      Message Sent!
+    </h1>
+    <p class="dialog__text">Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
+
+  <main aria-label="Contact Us Form">
+    <form class="form" aria-live="polite">
+      <h1 class="form__header">Contact Us</h1>
+      
+      <section class="form__section"> 
+        <label for="firstName" class="form__label">
+          <p>First Name<span aria-hidden="true">*</span></p>
+          <input 
+            id="firstName" 
+            name="firstName"
+            class="form__input"
+            type="text" 
+            placeholder="First Name"
+            required
+            aria-required="true"
+            aria-errormessage="firstNameError"> 
+            <p id="firstNameError" class="error">This field is required</p>
+        </label>
+
+        <label for="lastName" class="form__label">
+          <p>Last Name<span aria-hidden="true">*</span></p>
+          <input 
+            id="lastName" 
+            name="lastName"
+            class="form__input" 
+            type="text" 
+            placeholder="Last Name"
+            required
+            aria-required="true"
+            aria-errormessage="lastNameError"> 
+            <p id="lastNameError" class="error">This field is required</p>
+        </label>
+      </section>
+
+      <section class="form__section">
+        <label for="email" class="form__label"> 
+          <p>Email Address<span aria-hidden="true">*</span></p>
+          <input 
+            id="email" 
+            name="email"
+            class="form__input" 
+            type="email" 
+            placeholder="Email"
+            pattern=".+@.+[.].+"
+            required
+            aria-required="true"
+            aria-errormessage="emailError"> 
+          <p id="emailError" class="error">This field is required</p>
+        </label>
+      </section>
+
+      <fieldset class="form__section" aria-errormessage="queryTypeError">
+          <legend>Query Type<span aria-hidden="true">*</span></legend>
+          <label for="generalEnquiry">
+            <input 
+            id="generalEnquiry" 
+            class="form__input-radio" 
+            type="radio" 
+            name="queryType" 
+            value="General Enquiry"
+            required
+            aria-checked="false"
+            aria-required="true">
+            General Enquiry
+          </label>
+          
+          <label for="supportReq">
+            <input 
+            id="supportReq" 
+            class="form__input-radio" 
+            type="radio" 
+            name="queryType" 
+            value="Support Request"
+            aria-checked="false"
+            aria-required="true"
+            aria-errormessage="queryTypeError"> 
+            Support Request
+          </label>
+          <p id="queryTypeError" class="error">Please select a query type</p>
+      </fieldset>
+
+      <section class="form__section" aria-label="Message to the team"> 
+        <label for="message" class="form__label">
+          <p>Message<span aria-hidden="true">*</span></p>
+          <textarea 
+            id="message" 
+            name="message"
+            title="Please provide any details that are relevant to your query"
+            class="form__input-textarea" 
+            name="message"
+            rows="5"
+            required
+            aria-required="true"
+            aria-errormessage="messageError"></textarea>
+            <p id="messageError" class="error">This field is required</p>
+        </label>
+      </section>
+
+      <section class="form__section"> 
+        <label for="consent">
+          <input 
+            id="consent" 
+            name="consent"
+            class="form__input-checkbox" 
+            type="checkbox" 
+            value="consent"
+            required
+            aria-required="true"
+            aria-errormessage="consentError"
+            aria-checked="false"> 
+          <p>I consent to being contacted by the team<span aria-hidden="true">*</span></p>
+        </label>
+        <p id="consentError" class="error">To submit this form, please consent to being contacted</p>
+      </section>
+      
+      <button type="button" class="form__btn">Submit</button>
+    </form>
+  </main>
+    
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LeviKuhaulua" target="_blank" rel="noopener noreferrer">Levi Kuhaulua</a>.
+  </footer> -->
+</body>
+</html>

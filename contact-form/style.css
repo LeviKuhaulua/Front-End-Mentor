@@ -1,0 +1,257 @@
+.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { font-size: 11px; text-align: center; }
+
+
+/* CSS RESETS */ 
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+input, textarea { font: inherit; }
+
+textarea { resize: none; }
+
+body {
+    font-family: 'Karla', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; 
+    background-color: var(--clr-light-green); 
+    min-height: 100vh; 
+    display: grid; 
+    place-items: center;
+}
+
+img {
+    display: block; 
+    max-width: 100%; 
+    object-fit: cover; 
+}
+
+/* END OF RESETS */
+
+:root {
+    font-size: 1rem; 
+    --fw-regular: 400; 
+    --fw-bold: 700; 
+    --clr-light-green: hsl(148 38% 91%); 
+    --clr-green: hsl(169 82% 27%); 
+    --clr-red: hsl(0 66% 54%); 
+    --clr-white: hsl(0 0 100%); 
+    --clr-grey: hsl(186 15% 59%); 
+    --clr-dark-grey: hsl(187 24% 22%); 
+}
+
+main { width: min(45rem, 85%); }
+
+.form {
+    text-align: left; 
+    background-color: var(--clr-white);
+    border-radius: 10px;  
+    padding: 1em 2em; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.25rem; 
+    box-shadow: 0px 2px 3px hsl(from var(--clr-grey) h s l / 0.3);
+    color: var(--clr-dark-grey);  
+
+}
+
+.form__header {
+    font-weight: var(--fw-bold); /* 700 */
+    font-size: 2.25rem; 
+    color: var(--clr-dark-grey); 
+}
+
+.form__section {
+    display: flex; 
+    gap: 1.25rem; 
+    flex-wrap: wrap; 
+    margin-block: 0.25rem; 
+    /* Items take up as much space as possible */
+    & > * {
+        flex-grow: 1; 
+    }
+
+}
+
+.form__label {
+    display: flex; 
+    flex-direction: column; 
+
+
+    & > span {
+        margin-block: 0.75rem; 
+        font-size: 1rem; 
+        font-weight: var(--fw-regular); 
+        color: var(--clr-dark-grey); 
+        opacity: 0.9; 
+    }
+
+    & > p:first-child {
+        margin-bottom: 1rem; 
+    }
+
+    & > p > span {
+        margin-left: 0.5rem; 
+    }
+
+
+    & .form__input {
+        padding: 0.75em; 
+        border: 1px solid var(--clr-grey); 
+        border-radius: 10px; 
+        cursor: pointer; 
+    }
+
+    & :is(.form__input:focus-visible, 
+      .form__input-textarea:focus-visible) {
+        outline: 1px solid var(--clr-green);    
+    } 
+
+    & :where(.form__input-textarea) {
+        padding: 0.5rem 1rem; 
+    }
+
+}
+
+fieldset[class="form__section"] {
+    border: none; 
+    position: relative; 
+
+    & > legend {
+        font-size: 1rem; 
+        opacity: 0.9; 
+        margin-block: 1rem; 
+    }
+
+
+    & .form__input-radio {
+        accent-color: var(--clr-green); 
+        cursor: pointer; 
+        height: 15px; 
+        width: 15px; 
+    }
+
+    & > label {
+        display: flex; 
+        align-items: center; 
+        gap: 1rem; 
+        cursor: pointer; 
+        outline: 1px solid var(--clr-grey); 
+        padding: 0.75em; 
+        border-radius: 5px; 
+    }
+
+    & > label:has(.form__input-radio:checked) {
+        background-color: var(--clr-light-green);
+        outline: 2px solid var(--clr-green);  
+    }
+
+    & > legend > span {
+        margin-left: 0.5rem; 
+    }
+
+
+}
+
+label[for="consent"] {
+    position: relative;
+    cursor: pointer; 
+    display: flex; 
+
+    & .form__input-checkbox {
+        cursor: pointer; 
+        height: 18px; 
+        width: 18px; 
+        accent-color: var(--clr-green); 
+        margin-inline-end: 0.5rem; 
+    }
+
+    & .form__input-checkbox:focus-visible {
+        outline: 2px solid var(--clr-green); 
+    }
+
+    & > p > span {
+        margin-left: 0.5rem; 
+    }
+    
+
+}
+
+
+.form__btn {
+    padding: 1em 0; 
+    color: var(--clr-white); 
+    font-weight: var(--fw-bold); 
+    background-color: var(--clr-green); 
+    border: unset; 
+    border-radius: 10px; 
+    margin-block-start: 0.25rem; 
+
+    &:hover {
+        cursor: pointer; 
+        opacity: 0.9; 
+    }
+}
+
+.dialog {
+    width: min(30rem, 80%); 
+    padding: 0.75rem; 
+    border-radius: 10px; 
+    margin-top: 1rem; 
+    background-color: var(--clr-dark-grey); 
+    color: var(--clr-white); 
+    display: none; 
+
+
+    & > * {
+        margin-inline-start: 1rem; 
+    }
+
+    & .dialog__header {
+        display: flex; 
+        gap: 1rem; 
+        align-items: center; 
+        margin-block: 1rem; 
+        font-size: 1.5rem; 
+    }
+
+    & .dialog__text {
+        font-weight: var(--fw-regular); 
+        opacity: 0.8; 
+    }
+
+    
+
+}
+
+/* Validation */ 
+
+
+.error {
+    color: var(--clr-red); 
+    margin-block: 0.25rem; 
+    font-size: 0.875rem;
+    display: none; 
+}
+
+.form__input-error {
+    outline: 2px solid hsl(from var(--clr-red) h s l / 0.8); 
+}
+
+#queryTypeError {
+    position: absolute; 
+    bottom: -25px; 
+}
+
+
+input[aria-invalid="true"] + .error, 
+label[for="consent"]:has(input[aria-invalid="true"]) + .error {
+    display: unset; 
+}
+
+textarea[aria-invalid="true"] + .error {
+    display: unset; 
+}
+
+fieldset[aria-invalid="true"] > .error {
+    display: unset; 
+}
+
