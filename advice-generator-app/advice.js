@@ -1,8 +1,10 @@
+const adviceIdElm = document.getElementById('adviceSlipId'); 
+const adviceTextElm = document.getElementById('adviceSlip'); 
 async function getAdvice() {
-    const adviceIdElm = document.getElementById('adviceSlipId'); 
-    const adviceTextElm = document.getElementById('adviceSlip'); 
     
-    let adviceSlip = await fetch('https://api.adviceslip.com/advice'); 
+    // {cache: 'no-cache'} option for Firefox so that a new response is generated. 
+    let adviceSlip = await fetch('https://api.adviceslip.com/advice', {cache: 'no-cache'});
+    console.log(adviceSlip);  
     let adviceData = await adviceSlip.json(); 
     
     adviceIdElm.textContent = `Advice #${adviceData.slip.id}`; 
