@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="author" content="Levi Kuhaulua"> 
+  <meta name="description" content="Implementation of the Age Calculator challenge by Frontend Mentor"> 
+  <meta name="keywords" content="Frontend Mentor, HTML, CSS, JavaScript"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css"> 
+  <title>Frontend Mentor | Age calculator app</title>
+  <script src="age.js" defer></script>
+</head>
+<body>
+
+  <form id="date" aria-errormessage="dateErr">
+    <section 
+             id="dob"
+             aria-label="Enter Date of Birth Here" 
+             aria-live="assertive" 
+             aria-atomic="false"
+            >
+      <label for="day">
+        Day
+        <input type="text" 
+        name="day" 
+        id="day"
+        placeholder="DD"
+        aria-errormessage="dayErr">
+        <p id="dayErr"></p>
+      </label>
+
+      <label for="month">
+        Month
+        <input type="text" 
+              name="month" 
+              id="month"
+              placeholder="MM"
+              aria-errormessage="monthErr"> 
+        <p id="monthErr"></p>
+      </label>
+
+      <label for="year">
+        Year
+        <input type="text" 
+              name="year" 
+              id="year"
+              placeholder="YYYY"
+              aria-errormessage="yearErr"> 
+        <p id="yearErr"></p>
+      </label>
+
+      <p id="dateErr"></p>
+    </section>
+
+    <section> 
+      <div role="presentation"></div>
+      <button type="button" id="ageBtn" aria-label="Calculate Age">
+        <img src="assets/images/icon-arrow.svg" alt=""> 
+      </button>
+      <div role="presentation" class="afterBtn"></div>
+    </section>
+
+    <section aria-label="Your Calculated Age" 
+             aria-live="assertive" 
+             aria-atomic="true">
+      <p><span id="yearsCalc">--</span>years</p>
+      <p><span id="monthsCalc">--</span>months</p>
+      <p><span id="daysCalc">--</span>days</p>
+    </section>
+  </form>
+
+    
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener roreferrer">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/LeviKuhaulua" target="_blank" rel="noopener noreferrer">Levi Kuhaulua</a>.
+  </footer>
+
+</body>
+</html>

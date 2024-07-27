@@ -1,0 +1,202 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+*, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
+
+:root {
+    font-size: 16px; 
+    --clr-purple: hsl(259 100% 65%); 
+    --clr-red: hsl(0 100% 67%); 
+    --clr-white: hsl(0 0% 100%); 
+    --clr-off-white: hsl(0 0% 94%); 
+    --clr-light-grey: hsl(0 0% 86%); 
+    --clr-grey: hsl(0 1% 44%); 
+    --clr-black: hsl(0 0% 8%); 
+    --fw-bold: 800; 
+    --fw-semi-bold: 700; 
+    --fw-regular: 400; 
+}
+
+img, 
+svg {
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    max-width: 100%; 
+    display: block; 
+}
+
+
+input {
+    font: inherit; 
+    font-size: 2rem; 
+    color: var(--clr-black); 
+    padding-inline-start: 1rem;
+    padding-block: 0.75rem;  
+    border: 2px solid var(--clr-light-grey); 
+    border-radius: 5px; 
+    width: 7ch;  
+}
+
+p[id] { 
+    visibility: hidden; 
+    color: var(--clr-red); 
+    font-weight: var(--fw-regular); 
+    font-size: 0.75rem; 
+}
+
+p[id="dateErr"] {
+    position: absolute; 
+    bottom: -0.5rem; 
+    margin-left: 0.5rem; 
+}
+
+input[aria-invalid="true"] {
+    border: 2px solid var(--clr-red); 
+}
+
+label:has(input[aria-invalid="true"]) {
+
+    & > p[id] { visibility: visible; }
+}
+
+form[aria-invalid="true"] {
+   
+    & p[id = "dateErr"] {
+        visibility: visible; 
+    }
+
+    & label {
+        color: var(--clr-red); 
+    }
+
+    & input {
+        border: 2px solid var(--clr-red); 
+    }
+    
+}
+
+
+input:focus-visible {
+    outline: 2px solid var(--clr-purple); 
+}
+
+body {
+    min-height: 100dvh; 
+    display: grid; 
+    place-items: center; 
+    background-color: var(--clr-off-white); 
+    font-family: 'Poppins', system-ui, sans-serif; 
+}
+
+form {
+    width: min(50rem, 95%); 
+    padding: 2rem; 
+    background-color: white; 
+    border-radius: 0.5rem; 
+    border-bottom-right-radius: 4rem; 
+    box-shadow: 0px 0px var(--clr-grey); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+}
+
+section[aria-label="Enter Date of Birth Here"] {
+    display: flex; 
+    justify-content: space-between;
+    width: 80%; 
+    position: relative; 
+}
+
+label {
+    padding: 1rem 0.5rem; 
+    display: flex; 
+    flex-direction: column;
+    gap: 0.5rem;  
+    font-size: 1rem; 
+    letter-spacing: 0.2ch; 
+    color: var(--clr-grey); 
+}
+
+
+
+section:nth-child(2) {
+    display: flex; 
+
+    & > div {
+        flex-grow: 1; 
+    }
+}
+
+
+div[role="presentation"] {
+    height: 2px; 
+    background-color: var(--clr-light-grey); 
+    align-self: center; 
+}
+
+
+#ageBtn {
+    padding: 1em; 
+    border-radius: 50%; 
+    border: unset;  
+    background-color: var(--clr-purple); 
+    margin-left: auto;  
+
+    &:hover { 
+        cursor: pointer; 
+        background-color: var(--clr-black); 
+        transition: background-color 250ms ease; 
+    }
+
+    
+}
+
+.afterBtn {
+    height: 2px; 
+    background-color: var(--clr-light-grey); 
+    align-self: center; 
+    display: none;  
+}
+
+
+section[aria-label="Your Calculated Age"] {
+    font-size: clamp(1.5rem, 5vw + 0.5rem, 4rem); 
+
+    & > p {
+        font-weight: var(--fw-semi-bold); 
+    }
+
+    & > p > span {
+        font-weight: var(--fw-bold); 
+        font-style: italic; 
+        margin-block: 1.5rem; 
+        margin-inline-end: 1.25rem; 
+        color: var(--clr-purple); 
+    }
+}
+
+@media (max-width: 426px) {
+    section[aria-label="Enter Date of Birth Here"] {
+
+        & > label {
+            font-size: 0.75rem; 
+        }
+
+        & > label input {
+            width: 5.5ch; 
+            font-size: 1.25rem; 
+            padding-inline-start: 0.5rem; 
+        } 
+    }
+
+    p[id] {
+        font-size: 0.5rem; 
+    }
+    
+
+    .afterBtn {
+        display: unset; 
+    }
+
+}
