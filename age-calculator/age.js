@@ -143,11 +143,9 @@ calcBtn.addEventListener('click', () => {
     } else {
         form.removeAttribute('aria-invalid'); 
         dateErr.textContent = '';  
+        calcDate(currentDate); 
     }
 
-    // If everything is valid (no empty inputs, values are okay, date is okay) then calculate the age.
-    calcDate(currentDate); 
-    
     
 }); 
 
